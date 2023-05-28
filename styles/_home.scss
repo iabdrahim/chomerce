@@ -1,0 +1,210 @@
+nav {
+  position: sticky;
+  z-index: 100;
+  top: -1px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
+  border-bottom-color: transparent;
+  background-color: rgba(255, 255, 255, 0.521);
+  .logo {
+    img {
+      width: 182px;
+      height: 56px;
+    }
+  }
+  .searchBar {
+    width: 100%;
+  }
+  gap: 1rem;
+  form {
+    border-radius: 1000px;
+    width: 100%;
+    border: 2px solid var(--indigo);
+    background-color: white;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 24px;
+    gap: 0.5rem;
+    padding: 0.5rem 20px;
+    input {
+      &::placeholder {
+        color: var(--white-30);
+      }
+      width: 100%;
+      background-color: transparent;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      min-height: 100%;
+    }
+  }
+  .profile {
+    color: var(--orange);
+    font-size: 16px;
+    line-height: 19px;
+    min-width: 5rem;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  .cart {
+    border-radius: 50%;
+    padding: 0.5rem;
+    position: relative;
+    span {
+      background-color: var(--orange);
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-radius: 50%;
+      color: white;
+      min-width: 1.2rem;
+      min-height: 1.2rem;
+      font-size: 0.9rem;
+    }
+    &:hover {
+      background: #c5c5c52d;
+    }
+  }
+  .actions {
+    width: fit-content;
+  }
+  button.hello {
+    border: var(--indigo) 2px solid;
+    border-radius: 100px;
+    padding: 0.3rem;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 100%;
+    span {
+      display: block;
+    }
+  }
+}
+body {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+header {
+  .ctg {
+    .card {
+      // background: #bae1f7;
+      width: 64px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 24px;
+      &.green {
+        background: #f1fff2;
+      }
+      &.blue {
+        background-color: #e3f5ff;
+      }
+      &.green2 {
+        background-color: #f1fff2;
+      }
+      &.pink {
+        background: #ffe0e0;
+      }
+      &.red {
+        background: #f9e4d3;
+      }
+      &.brown {
+        background: #f9e4d3;
+      }
+      &.orange {
+        background: #fffaf5;
+      }
+      &.voilet {
+        background: #f8f1ff;
+      }
+      &.indigo {
+        background: #f8f1ff;
+      }
+      &.blue2 {
+        background: #e3f5ff;
+      }
+    }
+    h4 {
+      font-weight: 500;
+      text-align: center;
+      font-size: 16px;
+      line-height: 19px;
+
+      // color: #13315c;
+    }
+  }
+}
+
+main .product {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-direction: column;
+  button.buy {
+    border: orange 2px solid;
+    padding: 0.4rem 1.4rem;
+    border-radius: 1000px;
+    font-weight: 600;
+    color: #000032;
+    background-color: transparent;
+    span {
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 13px;
+      text-decoration-line: line-through;
+      margin: 0.3rem;
+      color: #b3b3b3;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+  }
+}
+
+.bg {
+  background-color: #f2f2f2;
+  padding: 2rem;
+  .tabs {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    gap: 1rem;
+    align-items: flex-start;
+    > div {
+      padding: 0.5rem 1.5rem;
+      cursor: pointer;
+      background: #f2f2f2;
+      color: var(--white-30);
+    }
+    div.active {
+      /* White/White 05 - #F2F2F2 */
+      padding: 0.5rem 1.5rem;
+      background: #f2f2f2;
+      color: var(--orange);
+      box-shadow: inset 0px -3px 0px var(--orange);
+    }
+  }
+}
+.latest {
+  h2 {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+  }
+}
+footer {
+  background-color: #000032;
+  color: white;
+  min-height: 40vh;
+}
