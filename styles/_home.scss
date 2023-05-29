@@ -167,6 +167,7 @@ main .product {
   img {
     width: 100%;
     height: 100%;
+    border-radius: 10px 10px 0px 0px;
     min-height: 250px;
   }
 }
@@ -207,4 +208,150 @@ footer {
   background-color: #000032;
   color: white;
   min-height: 40vh;
+}
+.details {
+  .image {
+    > img {
+      border-radius: 8px;
+      min-height: 500px;
+      max-width: 100%;
+      border: 1px solid #d9d9d9;
+    }
+    div > button {
+      width: 67.87px;
+      height: 58px;
+      border: 1px solid #d9d9d9;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      border-radius: 4px;
+      &.active {
+        border: 1px solid #2e54ff;
+        transform: scale(1.05);
+      }
+    }
+  }
+  .info {
+    h1 {
+      font-weight: 500;
+      font-size: 31px;
+      line-height: 36px;
+      color: #1a1a1a;
+    }
+    .price {
+      h3 {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 29px;
+        color: #000032;
+      }
+      span {
+        font-weight: 600;
+        text-decoration-line: line-through;
+        margin: 0.3rem;
+        color: #b3b3b3;
+      }
+    }
+    .get {
+      span {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 22px;
+        color: #000032;
+      }
+      button {
+        width: 24px;
+        height: 24px;
+
+        /* Brand/Blue/Blue - #2E54FF */
+
+        background: #2e54ff;
+        color: white;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.min {
+          /* Brand/Blue/Blue - #2E54FF */
+          background-color: transparent;
+
+          color: #000032;
+
+          border: 2px solid #2e54ff;
+          border-radius: 8px;
+        }
+      }
+    }
+    .chat {
+      background: var(--orange);
+      color: white;
+      width: 96px;
+      height: 38px;
+
+      border-radius: 8px;
+    }
+  }
+  .description {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+
+    /* Black/Black 60 - #666666 */
+
+    color: #666666;
+    ul {
+      list-style: disc;
+      padding-left: 1.2rem;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 29px;
+      margin: 1rem 0px;
+      color: #333333;
+    }
+    p {
+      margin: 0.5rem 0px;
+    }
+  }
+}
+.catagorie {
+  h1 {
+    font-weight: 500;
+    font-size: 31px;
+    line-height: 36px;
+    color: #333333;
+    margin-bottom: 1.2rem;
+  }
+
+  .btn {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #4d4d4d;
+    button {
+      border: 2px solid #b3b3b3;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 0.6rem 1.6rem;
+      line-height: 19px;
+      color: #666666;
+    }
+  }
+}
+.filter aside {
+  top: 100px;
+  overflow: auto;
+  left: 0;
+  h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+  }
 }

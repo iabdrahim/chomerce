@@ -21,7 +21,7 @@ function Container({
   return (
     <>
       <main
-        className={`m-auto flex-grow w-full transition-all flex h-full justify-start flex-col items-center ${
+        className={`m-auto flex-grow w-full transition-all flex h-full justify-start flex-col items-start ${
           !fullWidth ? "max-w-5xl px-4 mx-auto" : "px-4 md:px-24"
         } ${!className ? "" : className}`}
       >

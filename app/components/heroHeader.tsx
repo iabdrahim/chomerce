@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   Console,
@@ -44,12 +45,14 @@ let Ctg = ({
   icon: any;
 }) => {
   return (
-    <div
-      key={name}
-      className="ctg flex flex-col gap-3 justify-start items-center"
-    >
-      <div className={`card bg-opacity-20 ${color}`}>{icon}</div>
-      <h4 className={`${color} bg-opacity-10`}>{name}</h4>
-    </div>
+    <Link href={"/" + name}>
+      <div
+        key={name}
+        className="ctg flex flex-col gap-3 justify-start items-center"
+      >
+        <div className={`card bg-opacity-20 ${color}`}>{icon}</div>
+        <h4 className={`${color} bg-opacity-10`}>{name}</h4>
+      </div>
+    </Link>
   );
 };

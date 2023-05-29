@@ -1,6 +1,7 @@
 import Nav from "./components/nav";
 import "styles/globals.scss";
 import Footer from "./footer";
+import { SessionProvider } from "next-auth/react";
 
 export default function RootLayout({
   children,
@@ -10,6 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
+
       <body>
         <Nav />
         {children}

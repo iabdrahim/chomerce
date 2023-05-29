@@ -2,7 +2,7 @@ import React from "react";
 import Container from "./components/Container";
 import HeroHeader from "./components/heroHeader";
 import Product from "./components/ui/Product";
-import Tabs from "./components/filter";
+import Tabs from "./components/tabs";
 import Latest from "./components/latest";
 import Footer from "./footer";
 
