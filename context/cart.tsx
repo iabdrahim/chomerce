@@ -1,13 +1,21 @@
 import { createContext, useState, useEffect } from "react";
 let CartContext = createContext({
-  carts: [{ name: "", price: 0, discount: 0, img: "" }],
+  carts: [
+    {
+      name: "",
+      price: 0,
+      discount: 0,
+      img: "",
+      number: 1,
+      id: "",
+      isChecked: true,
+    },
+  ],
   setCarts: (x: any) => x,
 });
 
 export default function CartProvider({ children }: { children: any }) {
-  let [carts, setCarts] = useState([
-    { name: "", price: 0, discount: 0, img: "" },
-  ]);
+  let [carts, setCarts] = useState([]);
   let [isLoad, isDataLoad] = useState(false);
   useEffect(() => {
     if (localStorage.getItem("carts")) {

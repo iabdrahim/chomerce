@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/posts
+/TODO.todo
 /.pnp
 .pnp.js
 
