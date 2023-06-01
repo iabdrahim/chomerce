@@ -27,7 +27,7 @@ export default function HeroHeader() {
     { name: "Router", icon: <Router />, color: "indigo" },
   ];
   return (
-    <header className="w-full mt-4 flex justify-between flex-wrap items-start gap-2">
+    <header className="w-full mt-4 flex justify-between flex-wrap items-start gap-4">
       {catagories.map((ctg: any) => (
         <Ctg key={ctg.name} color={ctg.color} name={ctg.name} icon={ctg.icon} />
       ))}

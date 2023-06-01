@@ -8,13 +8,9 @@ export const authOptions: AuthOptions = {
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }),
-    GithubProvider({
-      clientId: process.env.GITHUB_ID as string,
-      clientSecret: process.env.GITHUB_SECRET as string,
-    }),
   ],
   pages: {
-    signIn: "/auth",
+    signIn: "/",
   },
   debug: process.env.NODE_ENV === "development",
   session: {

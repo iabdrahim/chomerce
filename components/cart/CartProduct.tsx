@@ -30,7 +30,7 @@ export default function CartProduct({ product }: { product: any }) {
     }
   };
   return (
-    <div className="flex justify-start items-center gap-6">
+    <div className="flex justify-start items-center gap-6 max-md:gap-2 w-full">
       <input
         type="checkbox"
         name=""

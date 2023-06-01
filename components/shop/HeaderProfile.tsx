@@ -21,7 +21,7 @@ export default function HeaderProfile() {
         />
       </div>
       <div className="action flex max-md:flex-col justify-between items-center gap-12 max-md:gap-4">
-        <Profile />
+        <Profile isMake={true} />
         <div className="searchBar">
           <form onClick={handleSubmit}>
             <input

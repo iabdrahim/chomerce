@@ -21,7 +21,7 @@ export default function Page() {
         Shop cart
       </h3>
       <div className="w-full flex max-md:flex-col justify-between gap-5">
-        <main className=" w-full flex flex-col gap-4 mt-5 justify-start items-center">
+        <main className=" w-full flex flex-col gap-8 mt-5 justify-start items-center">
           {carts.map((p: any) => (
             <CartProduct key={p.id} product={p} />
           ))}
@@ -32,7 +32,7 @@ export default function Page() {
             <h4>
               {sum}$ <span>tax:2$</span>
             </h4>
-            <button>Pay {sum}$</button>
+            <button>Pay {sum + 2}$</button>
           </div>
         </div>
       </div>

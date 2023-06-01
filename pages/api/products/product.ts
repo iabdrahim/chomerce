@@ -1,7 +1,10 @@
 import { NextApiRequest, NextApiResponse } from "next";
+import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
+import ECOMMERCE from "../../../ECOMMERCE.config";
 import Product from "../../../models/Product";
 import db from "../../../utils/db";
+import { authOptions } from "../auth/[...nextauth]";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -23,8 +26,16 @@ export default async function handler(
       let product = await Product.findOne({ _id: id });
 
       return res.status(200).send(product);
-    } else if (req.method == "POST") {
-      const data = req.body;
+    }
+
+    let session = await getServerSession(req, res, authOptions);
+    let user = session?.user?.email == ECOMMERCE.email;
+    if (!user) {
+      return res.send("you need to be logged in");
+    }
+    if (req.method == "POST") {
+      const data = JSON.parse(req.body);
+      console.log(data);
       if (!data) {
         return res.status(404).send({ error: "The product data is not valid" });
       }
@@ -41,7 +52,7 @@ export default async function handler(
         .status(200)
         .send({ message: "The product is removed successfully" });
     } else if (req.method == "PUT") {
-      let { id, data } = req.body;
+      let { id, data } = JSON.parse(req.body);
       if (!data || !id) {
         return res.status(404).send({ error: "The product data is not valid" });
       }

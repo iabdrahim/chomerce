@@ -61,17 +61,17 @@ export default function Footer() {
               <div>
                 <h3 className="uppercase text-lg">
                   <RiCustomerService2Line
-                    className="inline-block mx-2"
+                    className="inline-block mr-3"
                     size={20}
                   />
                   Contact
                 </h3>
                 <span className="block mt-2 hover:underline">
-                  <IoMdCall className="inline-block mx-2" size={19} /> +1 526
+                  <IoMdCall className="inline-block mr-3" size={19} /> +1 526
                   654 8965
                 </span>
                 <span className="block mt-2 hover:underline">
-                  <IoMdCall className="inline-block mx-2" size={19} /> +1 924
+                  <IoMdCall className="inline-block mr-3" size={19} /> +1 924
                   054 8865
                 </span>
               </div>

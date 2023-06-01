@@ -7,10 +7,17 @@ nav {
   transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
   border-bottom-color: transparent;
   background-color: rgba(255, 255, 255, 0.521);
+  @media not all and (min-width: 768px) {
+    flex-wrap: wrap;
+  }
   .logo {
     img {
       width: 182px;
       height: 56px;
+      @media not all and (min-width: 768px) {
+        width: 135px;
+        height: 56px;
+      }
     }
   }
 
@@ -27,6 +34,9 @@ nav {
   }
   .searchBar {
     width: 100%;
+    @media not all and (min-width: 768px) {
+      order: 1;
+    }
   }
   .cart {
     border-radius: 50%;
@@ -106,6 +116,7 @@ body {
 }
 header {
   .ctg {
+    max-width: 64px;
     .card {
       // background: #bae1f7;
       width: 64px;
@@ -182,19 +193,28 @@ main .product {
     width: 100%;
     height: 100%;
     border-radius: 10px 10px 0px 0px;
-    min-height: 250px;
+    min-height: 210px;
+    @media not all and (min-width: 768px) {
+      min-height: 180px;
+    }
   }
 }
 
 .bg {
   background-color: #f2f2f2;
   padding: 2rem;
+  @media not all and (min-width: 768px) {
+    padding: 0;
+  }
   .tabs {
     display: flex;
     justify-content: flex-start;
     font-size: 1.2rem;
     gap: 1rem;
     align-items: flex-start;
+    @media not all and (min-width: 768px) {
+      font-size: 1rem;
+    }
     > div {
       padding: 0.5rem 1.5rem;
       cursor: pointer;
@@ -467,6 +487,9 @@ footer {
       font-size: 21px;
       line-height: 29px;
       color: #1a1a1a;
+      @media not all and (min-width: 768px) {
+        font-size: 19px;
+      }
     }
     h4 {
       font-weight: 500;
@@ -480,4 +503,72 @@ body div.minHeightContainer > main {
   height: fit-content;
   min-height: 76vh;
   // margin-bottom: 1rem;
+}
+
+.new form {
+  input,
+  textarea {
+    width: 300px;
+    padding-left: 0.5rem;
+    height: 45px;
+    background: #ffffff;
+    outline: none;
+    border: 2px solid #b3b3b3;
+    border-radius: 8px;
+    &[type="number"] {
+      padding-left: 2rem;
+    }
+  }
+  & > div.side.w-3\/5 {
+    input {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+    .img {
+      height: 180px;
+      border-radius: 8px;
+      width: 100%;
+    }
+    .grid > .img {
+      height: 130px;
+      width: 180px;
+      @media not all and (min-width: 768px) {
+        height: 140px;
+        width: 140px;
+      }
+    }
+    & > div.img {
+      margin-bottom: 0.5rem;
+    }
+    label {
+      margin-bottom: 1rem;
+      display: block;
+    }
+  }
+  textarea {
+    padding-top: 0.5rem;
+    min-height: 125px;
+  }
+
+  label {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  button {
+    padding: 0.7rem 2rem;
+    color: white;
+    background: #f6a973;
+    border-radius: 24px;
+  }
+}
+.img.hide {
+  background-repeat: no-repeat;
+  background-position: center;
+  label {
+    opacity: 0;
+  }
 }

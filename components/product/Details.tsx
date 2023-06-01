@@ -1,20 +1,19 @@
-import React, { Profiler, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { CartContext } from "../../context/cart";
 import IProduct from "../../utils/productType";
 import Profile from "./Profile";
 
 export default function Details({ product }: { product: IProduct }) {
   let { carts, setCarts } = useContext(CartContext);
+  let [image, setImage] = useState(product.image);
   let addACart = (d: IProduct) => {
     let newArr = [...carts];
     let ct = newArr.filter((c) => c.id == d._id)[0];
     if (ct) {
-      console.log("++");
       ct.number++;
       setCarts(newArr);
       return;
     }
-    console.log("new");
     newArr.push({
       id: d._id,
       name: d.name,
@@ -30,7 +29,6 @@ export default function Details({ product }: { product: IProduct }) {
     let newArr = [...carts];
     let ct = newArr.filter((c) => c.id == d._id)[0];
     if (ct) {
-      console.log("--");
       if (ct.number == 1) {
         newArr = newArr.filter((c) => c.id != d._id);
         setCarts(newArr);
@@ -41,25 +39,45 @@ export default function Details({ product }: { product: IProduct }) {
       return;
     }
   };
+  let changeImage = (u: string, e: any) => {
+    setImage(u);
+    document
+      .querySelectorAll(".imgs > button")
+      .forEach((l) => l.classList.remove("active"));
+    console.log(u, e.target);
+    e.target.parentNode.classList.add("active");
+  };
   return (
     <main className="details w-full my-10">
       <header className="w-full flex justify-between items-start max-md:flex-col">
         <div className="flex w-full image flex-col gap-5">
           <img
-            src={product.image}
+            src={image}
             alt={"product image"}
             className="w-full object-cover object-center"
           />
           <div className="imgs flex gap-4">
-            <button className="active">
-              <img src={product.images.img1} alt={"product image"} />
+            <button
+              className="active"
+              onClick={(e: any) => changeImage(product.image, e)}
+            >
+              <img src={product.image} alt={"product image"} />
             </button>
-            <button>
-              <img src={product.images.img2} alt={"product image"} />
-            </button>
-            <button>
-              <img src={product.images.img3} alt={"product image"} />
-            </button>
+            {product.images.img1 && (
+              <button onClick={(e: any) => changeImage(product.images.img1, e)}>
+                <img src={product.images.img1} alt={"product image"} />
+              </button>
+            )}
+            {product.images.img2 && (
+              <button onClick={(e: any) => changeImage(product.images.img2, e)}>
+                <img src={product.images.img2} alt={"product image"} />
+              </button>
+            )}
+            {product.images.img3 && (
+              <button onClick={(e: any) => changeImage(product.images.img3, e)}>
+                <img src={product.images.img3} alt={"product image"} />
+              </button>
+            )}
           </div>
         </div>
         <div className="info pl-12 max-md:pl-0 max-md:mt-5 w-full flex flex-col gap-4">
@@ -125,17 +143,17 @@ export default function Details({ product }: { product: IProduct }) {
           <div className="price mt-4">
             <div className="flex gap-3">
               <h3>${product.price}</h3>
-              {product.discount && (
+              {product.discount != 0 && (
                 <span>
                   $
                   {(
                     product.price -
-                    (product.discount / 100) * product.price
+                    (product.discount || 0 / 100) * product.price
                   ).toFixed(2)}
                 </span>
               )}
             </div>
-            {product.discount && (
+            {product.discount != 0 && (
               <h4 className="text-green-600 font-medium text-lg">
                 disc.{product.discount}%
               </h4>
