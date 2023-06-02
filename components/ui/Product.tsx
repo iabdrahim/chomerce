@@ -22,7 +22,7 @@ export default function Product({ product }: { product: IProduct }) {
               <span>
                 {(
                   product.price -
-                  (product.discount || 0 / 100) * product.price
+                  (product.discount / 100) * product.price
                 ).toFixed(2)}
                 $
               </span>

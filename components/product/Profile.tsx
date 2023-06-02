@@ -36,7 +36,7 @@ export default function Profile({ isMake }: { isMake?: boolean }) {
               </clipPath>
             </defs>
           </svg>
-          {isMake ? "new" : "Chat"}
+          {isMake ? "new" : "shop"}
         </button>
       </Link>
     </div>

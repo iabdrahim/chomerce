@@ -190,6 +190,7 @@ export default function Form({
               id="dropzone-file"
               onInput={(e) => handleUpload(e, 0)}
               type="file"
+              accept="image/*"
               className="opacity-0 absolute left-0 top-0 w-full h-full"
             />
           </label>
@@ -231,6 +232,7 @@ export default function Form({
                 id="dropzone-file"
                 onInput={(e) => handleUpload(e, 1)}
                 type="file"
+                accept="image/*"
                 className="opacity-0 absolute left-0 top-0 w-full h-full"
               />
             </label>
@@ -265,6 +267,7 @@ export default function Form({
                 id="dropzone-file"
                 onInput={(e) => handleUpload(e, 9)}
                 type="file"
+                accept="image/*"
                 className="opacity-0 absolute left-0 top-0"
               />
             </label>
@@ -303,6 +306,7 @@ export default function Form({
               <input
                 id="dropzone-file"
                 type="file"
+                accept="image/*"
                 onInput={(e) => handleUpload(e, 3)}
                 className="opacity-0 absolute left-0 top-0"
               />
@@ -342,6 +346,7 @@ export default function Form({
               <input
                 id="dropzone-file"
                 type="file"
+                accept="image/*"
                 onInput={(e) => handleUpload(e, 4)}
                 className="opacity-0 absolute left-0 top-0"
               />

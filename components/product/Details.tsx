@@ -148,7 +148,7 @@ export default function Details({ product }: { product: IProduct }) {
                   $
                   {(
                     product.price -
-                    (product.discount || 0 / 100) * product.price
+                    (product.discount / 100) * product.price
                   ).toFixed(2)}
                 </span>
               )}

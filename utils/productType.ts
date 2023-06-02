@@ -3,7 +3,7 @@ export default interface IProduct {
   name: string;
   price: number;
   specification?: number;
-  discount?: number;
+  discount: number;
   description: string;
   brand: string;
   catagorie: string;
