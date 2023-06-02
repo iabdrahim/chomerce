@@ -54,7 +54,7 @@ export default function Nav() {
           </form>
         </div>
         <div className="actions flex gap-4 justify-between items-center">
-          {session ? (
+          {session.status ? (
             <button className="hello w-full flex" onClick={() => signOut()}>
               <RiUserSmileFill size={20} />
               <span>Hi, {session?.data?.user?.name}</span>
