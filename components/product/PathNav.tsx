@@ -6,10 +6,7 @@ export default function PathNav({ name }: { name: string }) {
   let { query } = useRouter();
   return (
     <div className="w-full">
-      <ul
-        className="flex ga
-      p-4 justify-start text-gray-400 items-center uppercase"
-      >
+      <ul className="flex gap-4 max-md:text-xs justify-start text-gray-400 items-center uppercase">
         <Link href={"/"}>
           <li>Home</li>
         </Link>

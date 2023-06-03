@@ -37,17 +37,17 @@ const Auth = ({ providers }: IAuth) => {
   let { data: user, isLoading, error } = useSwr("/api/getSession", fetcher);
 
   return (
-    <Container>
+    <Container className="items-center">
       {!user?.data ? (
         <div className="w-full flex flex-col items-center justify-center max-w-md gap-6">
           <div className="flex flex-col items-center gap-8 ">
-            <Image
+            {/* <Image
               src="/logo.svg"
               alt=""
               className="h-12"
               height={48}
               width={70}
-            />
+            /> */}
             <h2 className="mt-4 mb-3 text-xl text-center font-bold tracking-tight ">
               Log in
             </h2>

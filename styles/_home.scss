@@ -250,12 +250,20 @@ footer {
       border-radius: 8px;
       min-height: 500px;
       max-width: 100%;
+      @media not all and (min-width: 768px) {
+        min-height: 21rem;
+        margin-bottom: 1rem;
+      }
       border: 1px solid #d9d9d9;
     }
     div > button {
       width: 67.87px;
       height: 58px;
       border: 1px solid #d9d9d9;
+      @media not all and (min-width: 768px) {
+        width: 48px;
+        height: 48px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -290,6 +298,7 @@ footer {
       }
     }
     .get {
+      gap: 1rem;
       span {
         font-weight: 600;
         font-size: 17px;
@@ -325,10 +334,10 @@ footer {
     font-weight: 500;
     font-size: 20px;
     line-height: 23px;
-
-    /* Black/Black 60 - #666666 */
-
     color: #666666;
+    @media not all and (min-width: 768px) {
+      font-size: 16px;
+    }
     ul {
       list-style: disc;
       padding-left: 1.2rem;
@@ -432,7 +441,14 @@ footer {
     align-items: flex-start;
     padding: 36px 24px;
     gap: 1.5rem;
-
+    @media not all and (min-width: 768px) {
+      height: 260rem;
+      gap: 1rem;
+      margin-top: 1rem;
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
     h3 {
       font-weight: 500;
       font-size: 20px;
@@ -481,6 +497,10 @@ footer {
       border-radius: 8px;
       width: 110px;
       height: 110px;
+      @media not all and (min-width: 768px) {
+        width: 90px;
+        height: 90px;
+      }
     }
     h3 {
       font-weight: 500;
